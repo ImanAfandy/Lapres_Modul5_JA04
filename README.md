@@ -43,6 +43,7 @@ dinamis menggunakan bantuan DHCP SERVER. Kemudian kalian mengingat bahwa kalian 
 setting DHCP RELAY pada router yang menghubungkannya, seperti yang kalian telah pelajari di
 modul 3.</p>
 
+# Interfaces 
 
 # pikachu
 <pre>auto eth0
@@ -63,6 +64,7 @@ netmask 255.255.255.252
 </pre> 
 
 # blastoise
+<pre>
 auto eth0
 iface eth0 inet static
 address 192.168.0.2
@@ -85,22 +87,28 @@ iface eth0 inet static
 address 192.168.0.130
 netmask 255.255.255.128
 gateway 192.168.0.129
+</pre>
 
 # articuno
+<pre>
 auto eth0
 iface eth0 inet static
 address 10.151.73.42
 netmask 255.255.255.248
 gateway 10.151.73.41
+</pre>
 
 # mew
+<pre>
 auto eth0
 iface eth0 inet static
 address 10.151.73.43
 netmask 255.255.255.248
 gateway 10.151.73.41
+</pre>
 
 # venesaur
+<pre>
 auto eth0
 iface eth0 inet static
 address 192.168.0.6
@@ -116,15 +124,19 @@ auto eth2
 iface eth2 inet static
 address 192.168.1.0
 netmask 255.255.255.0
+</pre>
 
-#psyduck
+# psyduck
+<pre>
 auto eth0
 iface eth0 inet static
 address 192.168.1.2
 netmask 255.255.255.0
 gateway 192.168.1.0
+</pre>
 
 # arceus
+<pre> 
 auto eth0
 iface eth0 inet static
 address 192.168.0.10
@@ -135,20 +147,25 @@ auto eth1
 iface eth1 inet static
 address 192.168.0.17
 netmask 255.255.255.248
+</pre>
 
 # moltres
+<pre>
 auto eth0
 iface eth0 inet static
 address 192.168.0.18
 netmask 255.255.255.248
 gateway 192.168.0.17
+</pre>
 
 # mewtwo
+<pre>
 auto eth0
 iface eth0 inet static
 address 192.168.0.19
 netmask 255.255.255.248
 gateway 192.168.0.17
+</pre>
 
 <p>(1) Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi
 PIKACHU menggunakan iptables, namun Satoshi melarang kalian menggunakan MASQUERADE
