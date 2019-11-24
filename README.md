@@ -223,8 +223,16 @@ iptables -A INPUT -p icmp -m connlimit -connlimit-above 2 -j DROP
  (4) Kalian juga diminta untuk mengkonfigurasi PIKACHU untuk dapat membedakan ketika MEW
 diakses dari subnet AJK, akan diarahkan pada MEWTWO dengan port 1234. </p>
 <p>
+ <pre>
+ iptables -t nat -A PREROUTING -d 10.151.73.27 -s 10.151.36.0/24 -p tcp --dport 1234 -j DNAT --to-destination 192.168.0.19:1234 
+ </pre>
+
  (5) Sedangkan ketika
 diakses dari subnet INFORMATIKA akan diarahkan pada MOLTRES dengan port 1234. </p>
+ <pre>
+ iptables -t nat -A PREROUTING -d 10.151.73.27 -s 10.151.252.0/22 -p tcp --dport 1234 -j DNAT --to-destination 192.168.0.18:1234
+ </pre>
+ 
 <p>
 kemudian kalian diminta untuk membatasi akses ke MEW yang berasal dari SUBNET AJK dan
 SUBNET INFORMATIKA dengan peraturan sebagai berikut,:</p>
