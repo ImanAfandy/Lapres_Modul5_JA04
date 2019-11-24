@@ -2,14 +2,19 @@
 
 SOAL SHIFT MODUL 5
 
+<pre> 
 Satoshi ingin meminta bantuan kepada kalian untuk menjadi tim network engineer dalam usahanya.
 Karena kalian telah menguasai ilmu jarkom, dengan senang hati kalian membantu Satoshi untuk
-membuat jaringan komputer untuk mereka :)
+membuat jaringan komputer untuk mereka :) </pre>
+
+<pre>
 (A) Tugas pertama kalian sebagai tim network engineer adalah membuat topologi jaringan. Satoshi
 memberikan rancangan topologi jaringan usahanya sebagai berikut :
+</pre>
 
 <img src="https://github.com/ImanAfandy/Lapres_Modul5_JA04/blob/master/modul5.png">
 
+<pre>
 Keterangan : CLOUD diberikan IP TUNTAP
 
 ARTICUNO merupakan DHCP Server diberikan IP DMZ
@@ -19,9 +24,13 @@ Setiap Server diberikan memory sebesar 128M
 Client dan Router diberikan memori sebesar 64M
 Jumlah host pada subnet PSYDUCK 150 Host
 Jumlah host pada subnet SNORLAX 100 Host
-
+</pre>
+<pre>
 (B) karena kalian telah menguasai ilmu Subnetting dan Routing, Satoshi meminta kalian untuk
 membuat topologi tersebut menggunakan teknik CIDR atau VLSM. Setelah melakukan subnetting,
+
+</pre>
+
 (C) kalian juga diharuskan melakukan routing agar setiap perangkat pada jaringan tersebut dapat
 terhubung.
 (D) Tugas kedua kalian adalah memberikan ip pada subnet SNORLAX dan PSYDUCK secara
