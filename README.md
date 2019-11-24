@@ -30,9 +30,13 @@ Jumlah host pada subnet SNORLAX 100 Host
 membuat topologi tersebut menggunakan teknik CIDR atau VLSM. Setelah melakukan subnetting,
 </p>
 <img src="https://github.com/ImanAfandy/Lapres_Modul5_JA04/blob/master/Pengelompokan%20subneting.png">
-
+<p> disini kami menghitung menggunakan vlsm <p>
+ <img src="https://github.com/ImanAfandy/Lapres_Modul5_JA04/blob/master/perhitungan%20vlsm.png">
+  
+ <p> 
 (C) kalian juga diharuskan melakukan routing agar setiap perangkat pada jaringan tersebut dapat
 terhubung.
+ </p> 
 (D) Tugas kedua kalian adalah memberikan ip pada subnet SNORLAX dan PSYDUCK secara
 dinamis menggunakan bantuan DHCP SERVER. Kemudian kalian mengingat bahwa kalian harus
 setting DHCP RELAY pada router yang menghubungkannya, seperti yang kalian telah pelajari di
