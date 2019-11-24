@@ -28,8 +28,8 @@ Jumlah host pada subnet SNORLAX 100 Host
 <p>
 (B) karena kalian telah menguasai ilmu Subnetting dan Routing, Satoshi meminta kalian untuk
 membuat topologi tersebut menggunakan teknik CIDR atau VLSM. Setelah melakukan subnetting,
-
 </p>
+<img src="https://github.com/ImanAfandy/Lapres_Modul5_JA04/blob/master/Pengelompokan%20subneting.png">
 
 (C) kalian juga diharuskan melakukan routing agar setiap perangkat pada jaringan tersebut dapat
 terhubung.
