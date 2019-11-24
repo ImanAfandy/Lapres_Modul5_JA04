@@ -227,7 +227,8 @@ diakses dari subnet AJK, akan diarahkan pada MEWTWO dengan port 1234. </p>
 diakses dari subnet INFORMATIKA akan diarahkan pada MOLTRES dengan port 1234. </p>
 <p>
 kemudian kalian diminta untuk membatasi akses ke MEW yang berasal dari SUBNET AJK dan
-SUBNET INFORMATIKA dengan peraturan sebagai berikut,:
+SUBNET INFORMATIKA dengan peraturan sebagai berikut,:</p>
+<p>
 ● (6) Akses dari subnet AJK hanya diperbolehkan pada pukul 08.00 - 17.00 pada hari Senin sampai
 Jumat, </p>
 <pre>
