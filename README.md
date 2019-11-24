@@ -197,29 +197,53 @@ route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.0.5
 PIKACHU menggunakan iptables, namun Satoshi melarang kalian menggunakan MASQUERADE
 karena terlalu mudah.</p>
 <p>
+ <pre>
+ iptables -t nat -A POSTROUTING -s 192.168.0.0/16 -o eth0 -j SNAT --to-source 10.151.72.14
+ </pre>
 Karena keberadaan jaringan tersebut sudah mulai diketahui dari oleh jaringan luar, Satoshi pun
 merasa panik, karena merasa jaringannya masih belum aman. (2) Oleh karena itu maka kalian diminta
 untuk mendrop semua akses SSH dari luar Topologi (UML) Kalian pada server yang memiliki ip
 DMZ (DHCP dan DNS SERVER) pada PIKACHU demi menjaga keamanan.</p>
+<pre>
+iptables -A INPUT -p tcp --dport 22 -s 10.151.73.24/29 -j DROP
+rev: iptables -A FORWARD -p tcp --dport 22 -d 10.151.73.24/29 -i eth0 -j DROP
+</pre>
+
 <p>
 (3) Karena tim kalian maksimal terdiri dari 2 atau 3 orang saja, Satoshi meminta kalian untuk hanya
 membatasi DHCP dan DNS server hanya boleh menerima maksimal 2 atau 3(jumlah kelompok)
 koneksi ICMP secara bersamaan yang berasal dari mana saja menggunakan iptables pada masing
 masing server, selebihnya akan di DROP.</p>
+<pre>
+iptables -A OUTPUT -p icmp -m limit --limit 3/second -j ACCEPT
+iptables -A INPUT -p icmp -m connlimit -connlimit-above 2 -j DROP
+</pre>
 
-<p>(4) Kalian juga diminta untuk mengkonfigurasi PIKACHU untuk dapat membedakan ketika MEW
+<p>
+ (4) Kalian juga diminta untuk mengkonfigurasi PIKACHU untuk dapat membedakan ketika MEW
 diakses dari subnet AJK, akan diarahkan pada MEWTWO dengan port 1234. </p>
-<p>(5) Sedangkan ketika
+<p>
+ (5) Sedangkan ketika
 diakses dari subnet INFORMATIKA akan diarahkan pada MOLTRES dengan port 1234. </p>
 <p>
 kemudian kalian diminta untuk membatasi akses ke MEW yang berasal dari SUBNET AJK dan
 SUBNET INFORMATIKA dengan peraturan sebagai berikut,:
 ● (6) Akses dari subnet AJK hanya diperbolehkan pada pukul 08.00 - 17.00 pada hari Senin sampai
 Jumat, </p>
+<pre>
+iptables -A INPUT -s 10.151.36.0/24 -m time --timestart 08:00 --timestop 17:00 --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
+iptables -A INPUT -s 10.151.36.0/24 -m time --timestart 17:01 --timestop 07:59 -j REJECT
+iptables -A INPUT -s 10.151.36.0/24 -m time --timestart 17:00 --timestop 08:00 --weekend Sat,Sun -j REJECT
+
+</pre>
 <p>
 ● (7) Akses dari subnet INFORMATIKA hanya diperbolehkan pada pukul 17.00 hingga pukul
 09.00 setiap harinya
 Selain itu paket akan di REJECT. </p>
+<pre>
+iptables -A INPUT -s 10.151.252.0/22 -m time --timestart 08:00 --timestop 17:00 --weekdays Mon,Tue,Wed,Thu,Fri -j ACCEPT
+rev: iptables -A INPUT -s 10.151.252.0/22 -m time --timestart 09:01 --timestop 16:59 -j REJEC
+</pre>
 <p>
 Karena kita memiliki 2 buah WEB Server, (9)Satoshi ingin PIKACHU disetting sehingga setiap
 request dari client yang mengakses DNS Server akan didistribusikan secara bergantian pada
