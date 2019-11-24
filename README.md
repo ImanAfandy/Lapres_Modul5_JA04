@@ -8,6 +8,8 @@ membuat jaringan komputer untuk mereka :)
 (A) Tugas pertama kalian sebagai tim network engineer adalah membuat topologi jaringan. Satoshi
 memberikan rancangan topologi jaringan usahanya sebagai berikut :
 
+<img src="https://github.com/ImanAfandy/Lapres_Modul5_JA04/blob/master/modul5.png">
+
 Keterangan : CLOUD diberikan IP TUNTAP
 
 ARTICUNO merupakan DHCP Server diberikan IP DMZ
