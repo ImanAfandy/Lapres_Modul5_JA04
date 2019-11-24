@@ -42,6 +42,113 @@ terhubung.
 dinamis menggunakan bantuan DHCP SERVER. Kemudian kalian mengingat bahwa kalian harus
 setting DHCP RELAY pada router yang menghubungkannya, seperti yang kalian telah pelajari di
 modul 3.</p>
+
+
+# pikachu
+auto eth0
+iface eth0 inet static
+address 10.151.72.22
+netmask 255.255.255.252
+gateway 10.151.72.21
+
+auto eth1
+iface eth1 inet static
+address 192.168.0.5
+netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+address 192.168.0.1
+netmask 255.255.255.252
+
+# blastoise
+auto eth0
+iface eth0 inet static
+address 192.168.0.2
+netmask 255.255.255.252
+gateway 192.168.0.1
+
+auto eth1
+iface eth1 inet static
+address 192.168.0.129
+netmask 255.255.255.128
+
+auto eth2
+iface eth2 inet static
+address 10.151.73.41
+netmask 255.255.255.248
+
+#snorlax
+auto eth0
+iface eth0 inet static
+address 192.168.0.130
+netmask 255.255.255.128
+gateway 192.168.0.129
+
+# articuno
+auto eth0
+iface eth0 inet static
+address 10.151.73.42
+netmask 255.255.255.248
+gateway 10.151.73.41
+
+# mew
+auto eth0
+iface eth0 inet static
+address 10.151.73.43
+netmask 255.255.255.248
+gateway 10.151.73.41
+
+# venesaur
+auto eth0
+iface eth0 inet static
+address 192.168.0.6
+netmask 255.255.255.252
+gateway 192.168.0.5
+
+auto eth1
+iface eth1 inet static
+address 192.168.0.9
+netmask 255.255.255.252
+
+auto eth2
+iface eth2 inet static
+address 192.168.1.0
+netmask 255.255.255.0
+
+#psyduck
+auto eth0
+iface eth0 inet static
+address 192.168.1.2
+netmask 255.255.255.0
+gateway 192.168.1.0
+
+# arceus
+auto eth0
+iface eth0 inet static
+address 192.168.0.10
+netmask 255.255.255.252
+gateway 192.168.0.9
+
+auto eth1
+iface eth1 inet static
+address 192.168.0.17
+netmask 255.255.255.248
+
+# moltres
+auto eth0
+iface eth0 inet static
+address 192.168.0.18
+netmask 255.255.255.248
+gateway 192.168.0.17
+
+# mewtwo
+auto eth0
+iface eth0 inet static
+address 192.168.0.19
+netmask 255.255.255.248
+gateway 192.168.0.17
+
 <p>(1) Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi
 PIKACHU menggunakan iptables, namun Satoshi melarang kalian menggunakan MASQUERADE
 karena terlalu mudah.</p>
