@@ -167,6 +167,32 @@ netmask 255.255.255.248
 gateway 192.168.0.17
 </pre>
 
+# routing
+# pikachu 
+<pre>
+route add -net 192.168.0.128 netmask 255.255.255.128 gw 192.168.0.2 #A1
+route add -net 10.151.73.40 netmask 255.255.255.248 gw 192.168.0.2 #DMZ
+route add -net 192.168.0.8 netmask 255.255.255.252 gw 192.168.0.6 #A4
+route add -net 192.168.1.0 netmask 255.255.255.0 gw 192.168.0.6 #A5
+route add -net 192.168.0.16 netmask 255.255.255.248 gw 192.168.0.6 #A6
+</pre>
+
+# blastoise
+<pre>
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.0.1
+</pre>
+
+# venusaur
+<pre>
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.0.5
+route add -net 192.168.0.16 netmask 255.255.255.248 gw 192.168.0.10 #A6
+</pre>
+# arceus
+<pre>
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.0.9
+route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.0.5
+</pre>
+
 <p>(1) Agar topologi yang kalian buat dapat mengakses keluar, kalian diminta untuk mengkonfigurasi
 PIKACHU menggunakan iptables, namun Satoshi melarang kalian menggunakan MASQUERADE
 karena terlalu mudah.</p>
